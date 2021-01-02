@@ -7,6 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B2C4FB125A0E09300891773 /* adventure_videogame.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FB025A0E09300891773 /* adventure_videogame.mp3 */; };
+		4B2C4FB225A0E09300891773 /* adventure_videogame.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FB025A0E09300891773 /* adventure_videogame.mp3 */; };
+		4B2C4FB625A0E0A700891773 /* knife.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FB525A0E0A700891773 /* knife.mp3 */; };
+		4B2C4FB725A0E0A700891773 /* knife.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FB525A0E0A700891773 /* knife.mp3 */; };
+		4B2C4FC425A0E14000891773 /* groan3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FBA25A0E14000891773 /* groan3.mp3 */; };
+		4B2C4FC525A0E14000891773 /* groan3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FBA25A0E14000891773 /* groan3.mp3 */; };
+		4B2C4FC625A0E14000891773 /* groan4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FBB25A0E14000891773 /* groan4.mp3 */; };
+		4B2C4FC725A0E14000891773 /* groan4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FBB25A0E14000891773 /* groan4.mp3 */; };
+		4B2C4FC825A0E14000891773 /* dying5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FBC25A0E14000891773 /* dying5.mp3 */; };
+		4B2C4FC925A0E14000891773 /* dying5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FBC25A0E14000891773 /* dying5.mp3 */; };
+		4B2C4FCA25A0E14000891773 /* dying3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FBD25A0E14000891773 /* dying3.mp3 */; };
+		4B2C4FCB25A0E14000891773 /* dying3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FBD25A0E14000891773 /* dying3.mp3 */; };
+		4B2C4FCC25A0E14000891773 /* dying4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FBE25A0E14000891773 /* dying4.mp3 */; };
+		4B2C4FCD25A0E14000891773 /* dying4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FBE25A0E14000891773 /* dying4.mp3 */; };
+		4B2C4FCE25A0E14000891773 /* groan1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FBF25A0E14000891773 /* groan1.mp3 */; };
+		4B2C4FCF25A0E14000891773 /* groan1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FBF25A0E14000891773 /* groan1.mp3 */; };
+		4B2C4FD025A0E14000891773 /* groan5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FC025A0E14000891773 /* groan5.mp3 */; };
+		4B2C4FD125A0E14000891773 /* groan5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FC025A0E14000891773 /* groan5.mp3 */; };
+		4B2C4FD225A0E14000891773 /* dying1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FC125A0E14000891773 /* dying1.mp3 */; };
+		4B2C4FD325A0E14000891773 /* dying1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FC125A0E14000891773 /* dying1.mp3 */; };
+		4B2C4FD425A0E14000891773 /* dying2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FC225A0E14000891773 /* dying2.mp3 */; };
+		4B2C4FD525A0E14000891773 /* dying2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FC225A0E14000891773 /* dying2.mp3 */; };
+		4B2C4FD625A0E14000891773 /* groan2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FC325A0E14000891773 /* groan2.mp3 */; };
+		4B2C4FD725A0E14000891773 /* groan2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FC325A0E14000891773 /* groan2.mp3 */; };
+		4B2C4FDB25A0E1DD00891773 /* night-forest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FDA25A0E1DD00891773 /* night-forest.mp3 */; };
+		4B2C4FDC25A0E1DD00891773 /* night-forest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C4FDA25A0E1DD00891773 /* night-forest.mp3 */; };
 		4BAE66F42597AAD100DCB4B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE66F32597AAD100DCB4B1 /* AppDelegate.swift */; };
 		4BAE66F62597AAD100DCB4B1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE66F52597AAD100DCB4B1 /* GameViewController.swift */; };
 		4BAE66F92597AAD100DCB4B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BAE66F72597AAD100DCB4B1 /* Main.storyboard */; };
@@ -25,6 +51,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B2C4FB025A0E09300891773 /* adventure_videogame.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = adventure_videogame.mp3; sourceTree = "<group>"; };
+		4B2C4FB525A0E0A700891773 /* knife.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = knife.mp3; sourceTree = "<group>"; };
+		4B2C4FBA25A0E14000891773 /* groan3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = groan3.mp3; sourceTree = "<group>"; };
+		4B2C4FBB25A0E14000891773 /* groan4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = groan4.mp3; sourceTree = "<group>"; };
+		4B2C4FBC25A0E14000891773 /* dying5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dying5.mp3; sourceTree = "<group>"; };
+		4B2C4FBD25A0E14000891773 /* dying3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dying3.mp3; sourceTree = "<group>"; };
+		4B2C4FBE25A0E14000891773 /* dying4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dying4.mp3; sourceTree = "<group>"; };
+		4B2C4FBF25A0E14000891773 /* groan1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = groan1.mp3; sourceTree = "<group>"; };
+		4B2C4FC025A0E14000891773 /* groan5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = groan5.mp3; sourceTree = "<group>"; };
+		4B2C4FC125A0E14000891773 /* dying1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dying1.mp3; sourceTree = "<group>"; };
+		4B2C4FC225A0E14000891773 /* dying2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dying2.mp3; sourceTree = "<group>"; };
+		4B2C4FC325A0E14000891773 /* groan2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = groan2.mp3; sourceTree = "<group>"; };
+		4B2C4FDA25A0E1DD00891773 /* night-forest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "night-forest.mp3"; sourceTree = "<group>"; };
 		4BAE66E82597AAD100DCB4B1 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		4BAE66E92597AAD100DCB4B1 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		4BAE66EA2597AAD100DCB4B1 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -61,6 +100,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B2C4FAF25A0E06900891773 /* M+E */ = {
+			isa = PBXGroup;
+			children = (
+				4B2C4FDA25A0E1DD00891773 /* night-forest.mp3 */,
+				4B2C4FB025A0E09300891773 /* adventure_videogame.mp3 */,
+				4B2C4FB525A0E0A700891773 /* knife.mp3 */,
+				4B2C4FC125A0E14000891773 /* dying1.mp3 */,
+				4B2C4FC225A0E14000891773 /* dying2.mp3 */,
+				4B2C4FBD25A0E14000891773 /* dying3.mp3 */,
+				4B2C4FBE25A0E14000891773 /* dying4.mp3 */,
+				4B2C4FBC25A0E14000891773 /* dying5.mp3 */,
+				4B2C4FBF25A0E14000891773 /* groan1.mp3 */,
+				4B2C4FC325A0E14000891773 /* groan2.mp3 */,
+				4B2C4FBA25A0E14000891773 /* groan3.mp3 */,
+				4B2C4FBB25A0E14000891773 /* groan4.mp3 */,
+				4B2C4FC025A0E14000891773 /* groan5.mp3 */,
+			);
+			name = "M+E";
+			sourceTree = "<group>";
+		};
 		4BAE66E22597AAD100DCB4B1 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +136,7 @@
 				4BAE66E82597AAD100DCB4B1 /* Actions.sks */,
 				4BAE66E92597AAD100DCB4B1 /* GameScene.sks */,
 				4BAE66EA2597AAD100DCB4B1 /* GameScene.swift */,
+				4B2C4FAF25A0E06900891773 /* M+E */,
 				4BAE66EB2597AAD100DCB4B1 /* Assets.xcassets */,
 			);
 			path = "GameTest Shared";
@@ -195,9 +255,22 @@
 			files = (
 				4BAE670F2597AAD100DCB4B1 /* GameScene.sks in Resources */,
 				4BAE66F92597AAD100DCB4B1 /* Main.storyboard in Resources */,
+				4B2C4FC425A0E14000891773 /* groan3.mp3 in Resources */,
+				4B2C4FCC25A0E14000891773 /* dying4.mp3 in Resources */,
+				4B2C4FCA25A0E14000891773 /* dying3.mp3 in Resources */,
+				4B2C4FD425A0E14000891773 /* dying2.mp3 in Resources */,
+				4B2C4FC625A0E14000891773 /* groan4.mp3 in Resources */,
+				4B2C4FD625A0E14000891773 /* groan2.mp3 in Resources */,
+				4B2C4FD225A0E14000891773 /* dying1.mp3 in Resources */,
+				4B2C4FB625A0E0A700891773 /* knife.mp3 in Resources */,
 				4BAE670D2597AAD100DCB4B1 /* Actions.sks in Resources */,
+				4B2C4FC825A0E14000891773 /* dying5.mp3 in Resources */,
 				4BAE66FC2597AAD100DCB4B1 /* LaunchScreen.storyboard in Resources */,
+				4B2C4FD025A0E14000891773 /* groan5.mp3 in Resources */,
+				4B2C4FDB25A0E1DD00891773 /* night-forest.mp3 in Resources */,
+				4B2C4FCE25A0E14000891773 /* groan1.mp3 in Resources */,
 				4BAE67132597AAD100DCB4B1 /* Assets.xcassets in Resources */,
+				4B2C4FB125A0E09300891773 /* adventure_videogame.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,10 +278,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B2C4FD325A0E14000891773 /* dying1.mp3 in Resources */,
+				4B2C4FD725A0E14000891773 /* groan2.mp3 in Resources */,
+				4B2C4FDC25A0E1DD00891773 /* night-forest.mp3 in Resources */,
+				4B2C4FCF25A0E14000891773 /* groan1.mp3 in Resources */,
 				4BAE670A2597AAD100DCB4B1 /* Main.storyboard in Resources */,
+				4B2C4FB225A0E09300891773 /* adventure_videogame.mp3 in Resources */,
+				4B2C4FC925A0E14000891773 /* dying5.mp3 in Resources */,
 				4BAE67102597AAD100DCB4B1 /* GameScene.sks in Resources */,
+				4B2C4FC725A0E14000891773 /* groan4.mp3 in Resources */,
 				4BAE67142597AAD100DCB4B1 /* Assets.xcassets in Resources */,
+				4B2C4FCB25A0E14000891773 /* dying3.mp3 in Resources */,
 				4BAE670E2597AAD100DCB4B1 /* Actions.sks in Resources */,
+				4B2C4FC525A0E14000891773 /* groan3.mp3 in Resources */,
+				4B2C4FD525A0E14000891773 /* dying2.mp3 in Resources */,
+				4B2C4FCD25A0E14000891773 /* dying4.mp3 in Resources */,
+				4B2C4FB725A0E0A700891773 /* knife.mp3 in Resources */,
+				4B2C4FD125A0E14000891773 /* groan5.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
