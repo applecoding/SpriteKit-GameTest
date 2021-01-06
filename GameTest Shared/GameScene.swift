@@ -138,12 +138,12 @@ class GameScene: SKScene {
         deltaTime = currentTime - lastFrameTime
         lastFrameTime = currentTime
         if isScroll {
-            moverLayer(layer: 1, tiempo: 20.0)
-            moverLayer(layer: 2, tiempo: 30.0)
-            moverLayer(layer: 3, tiempo: 40.0)
-            moverLayer(layer: 4, tiempo: 50.0)
-            moverLayer(layer: 5, tiempo: 60.0)
-            moverLayer(layer: 6, tiempo: 70.0)
+            moverLayer(layer: 1, tiempo: 70.0)
+            moverLayer(layer: 2, tiempo: 80.0)
+            moverLayer(layer: 3, tiempo: 90.0)
+            moverLayer(layer: 4, tiempo: 100.0)
+            moverLayer(layer: 5, tiempo: 110.0)
+            moverLayer(layer: 6, tiempo: 120.0)
         }
     }
     
