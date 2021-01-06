@@ -6,9 +6,10 @@
 //
 
 import SpriteKit
+import GameplayKit
 import AVFoundation
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var musicPlayer:AVAudioPlayer!
     var ambientPlayer:AVAudioPlayer!
@@ -18,6 +19,9 @@ class GameScene: SKScene {
     
     var deltaTime:TimeInterval = 0
     var lastFrameTime:TimeInterval = 0
+    
+    var estado:EstadoAventurera = .quieta
+    let nuevoEnemigo = GKRandomDistribution()
     
     class func newGameScene() -> GameScene {
         // Load 'GameScene.sks' as an SKScene.
@@ -49,9 +53,20 @@ class GameScene: SKScene {
         } catch {
             print("Error al crear el player de música \(error)")
         }
+        
+        guard let aventurera = childNode(withName: "Aventurer") as? SKSpriteNode else {
+            return
+        }
+        aventurera.physicsBody = SKPhysicsBody(circleOfRadius: (aventurera.size.width / UIScreen.main.scale) / 3)
+        aventurera.physicsBody?.categoryBitMask = Cuerpos.aventurera
+        aventurera.physicsBody?.contactTestBitMask = Cuerpos.zombie
+        aventurera.physicsBody?.usesPreciseCollisionDetection = true
     }
     
     override func didMove(to view: SKView) {
+        physicsWorld.gravity = .zero
+        physicsWorld.contactDelegate = self
+        
         self.setUpScene()
         let gesture = UISwipeGestureRecognizer(target: self, action: #selector(salto(_:)))
         gesture.direction = .up
@@ -59,6 +74,18 @@ class GameScene: SKScene {
         let scrollGesture = UISwipeGestureRecognizer(target: self, action: #selector(activaScroll(_:)))
         scrollGesture.direction = .left
         self.view?.addGestureRecognizer(scrollGesture)
+        
+        let newEnemy = SKAction.wait(forDuration: 2, withRange: 2)
+        let shuffle = SKAction.run {
+            self.shuffleEnemy()
+        }
+        self.run(.repeatForever(.sequence([newEnemy, shuffle])))
+    }
+    
+    func shuffleEnemy() {
+        if nuevoEnemigo.nextBool() {
+            newZombie()
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -75,9 +102,13 @@ class GameScene: SKScene {
                 habiaScroll = true
             }
             let knife = SKAction.playSoundFileNamed("knife.mp3", waitForCompletion: false)
+            estado = .ataca
             aventura.run(SKAction.sequence([knife, ataca])) {
                 if habiaScroll {
+                    self.estado = .corre
                     self.isScroll.toggle()
+                } else {
+                    self.estado = .quieta
                 }
             }
         }
@@ -98,7 +129,15 @@ class GameScene: SKScene {
             advJump, secuenciaMov
         ])
         isMoving = true
-        aventura.run(jump) { self.isMoving = false }
+        estado = .salta
+        aventura.run(jump) {
+            if self.isScroll {
+                self.estado = .corre
+            } else {
+                self.estado = .quieta
+            }
+            self.isMoving = false
+        }
     }
     
     @objc func activaScroll(_ gesture:UISwipeGestureRecognizer) {
@@ -144,6 +183,51 @@ class GameScene: SKScene {
             moverLayer(layer: 4, tiempo: 100.0)
             moverLayer(layer: 5, tiempo: 110.0)
             moverLayer(layer: 6, tiempo: 120.0)
+        }
+    }
+    
+    func newZombie() {
+        guard let aventurera = childNode(withName: "Aventurer") as? SKSpriteNode,
+              let zombieWalk = SKAction(named: "ZombieWalk") else {
+            return
+        }
+        let zombie = SKSpriteNode(imageNamed: "Walk (1)")
+        zombie.position = CGPoint(x: self.frame.maxX + (zombie.frame.width * 2), y: aventurera.position.y)
+        zombie.zPosition = aventurera.zPosition + 1
+        zombie.xScale = -1
+        addChild(zombie)
+        let moveZombie = SKAction.moveTo(x: aventurera.position.x, duration: .random(in: 4...7))
+        moveZombie.timingMode = .easeIn
+        zombie.run(.group([moveZombie, zombieWalk,
+                           .sequence([.wait(forDuration: .random(in: 1...3)), .playSoundFileNamed("groan\(Int.random(in: 1...5)).mp3", waitForCompletion: false)])
+        ]))
+        zombie.physicsBody = SKPhysicsBody(circleOfRadius: (zombie.size.width / UIScreen.main.scale) / 3)
+        zombie.physicsBody?.categoryBitMask = Cuerpos.zombie
+        zombie.physicsBody?.contactTestBitMask = Cuerpos.aventurera
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        guard let deadZombie = SKAction(named: "ZombieDead") else {
+            return
+        }
+        var aventura:SKPhysicsBody
+        var zombie:SKPhysicsBody
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+            aventura = contact.bodyA
+            zombie = contact.bodyB
+        } else {
+            aventura = contact.bodyB
+            zombie = contact.bodyA
+        }
+        if estado == .ataca, let thezombie = zombie.node as? SKSpriteNode {
+            thezombie.anchorPoint = CGPoint(x: 0.5, y: 0.6)
+            thezombie.run(.sequence([
+                .playSoundFileNamed("dying\(Int.random(in: 1...5)).mp3", waitForCompletion: false),
+                deadZombie,
+                .removeFromParent()
+            ])) {
+                aventura.node?.run(.moveTo(x: 0, duration: 1.0))
+            }
         }
     }
     
